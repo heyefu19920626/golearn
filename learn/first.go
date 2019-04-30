@@ -3,16 +3,19 @@ package main
 import "fmt"
 
 const (
-    a = iota
+    a = iota //0
     b
     c
     d = "haha"
-    e = iota
+    e = iota //4
     f
 )
 
+// 在下一个 const 出现之前，每出现一次 iota,其所代表的数字自动加 1
+const g = iota //0
+
 func main(){
-    fmt.Println(a, b, c, d, e, f)
+    fmt.Println(a, b, c, d, e, f, g)
     fmt.Println("Hello Go!")
 
     var a = 1
